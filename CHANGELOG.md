@@ -5,7 +5,12 @@
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
 - License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
+- A Licenses list in each project's Updates tab, with a Set License button for each plugin. For an inactive plugin, whose license page doesn't exist yet, the button opens the Plugins page and explains what to activate first.
+- Update plans show what will run unattended, where the run will pause for a ZIP or a license, and what's held back.
+- Symlinked plugins and themes are labeled "Symlinked" and left out of updates.
+- Neater plugin lists: versions, statuses, and buttons line up in columns.
 - Updated brand colors and a clearer selection indicator in update settings.
+- Fixed the sidebar so choosing a section while a project is open shows that section.
 - Fixed a rare hang when several WP-CLI commands finished at the same time.
 
 ## 0.2.0 — Update policies
