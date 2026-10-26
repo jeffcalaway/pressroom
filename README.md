@@ -15,6 +15,7 @@ PressRoom finds the WordPress sites on your Mac, connects to them with the right
 - **Tests the connection safely.** Read-only checks of PHP, WP-CLI, the WordPress files, and the database, with plain-language guidance when something's off (for example, "LocalWP's database server may not be running").
 - **Scans for updates.** Core, plugins, and themes, including updates that need a manually downloaded package. Partial scans are labeled as partial, never as "up to date."
 - **Respects how each plugin should be maintained.** Mark plugins and themes Never Update, License-Managed, or Require Manual Package. PressRoom enforces those choices, detects Composer-managed and Git-committed components, and checks vendor ZIPs before accepting them.
+- **Knows when a license needs attention.** For premium plugins like ACF PRO, SearchWP, WP All Import/Export Pro, Gravity Forms, and Elementor Pro, PressRoom tells you when no license is active or it has expired, and links straight to the license settings in your local site's admin.
 - **Shows what needs you first.** A dashboard that highlights projects with updates, connection problems, or missing scans.
 - **Stays out of your projects.** PressRoom stores its data in `~/Library/Application Support/PressRoom` and never writes inside your WordPress folders. Git details are read from `.git` files; PressRoom never commits, pushes, or fetches.
 
@@ -30,7 +31,9 @@ Download PressRoom, move **PressRoom.app** to Applications, and open it. Current
 
 ## Privacy
 
-PressRoom runs entirely on your Mac. It has no account, analytics, or telemetry. When it checks for updates, WP-CLI contacts WordPress.org (and any plugin vendors your site is configured to use), just as your WordPress dashboard does.
+PressRoom runs entirely on your Mac. It has no account, analytics, or telemetry. When it checks for updates, WP-CLI contacts WordPress.org (and any plugin vendors your site is configured to use), just as your WordPress dashboard does. PressRoom also downloads the plugin icons those sources publish so it can show them; you can turn this off in Settings › Appearance.
+
+License checks read only the license *status* premium plugins store in your site's database. PressRoom never reads, stores, or sends license keys.
 
 ## License
 

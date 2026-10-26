@@ -3,6 +3,10 @@
 ## Unreleased
 
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
+- Plugins show their own icons, and themes show their screenshots.
+- License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
+- Updated brand colors and a clearer selection indicator in update settings.
+- Fixed a rare hang when several WP-CLI commands finished at the same time.
 
 ## 0.2.0 — Update policies
 
