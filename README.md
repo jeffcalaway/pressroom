@@ -5,13 +5,14 @@ A native macOS app for keeping WordPress projects updated, tested, and deploymen
 PressRoom finds the WordPress sites on your Mac, connects to them with the right PHP and WP-CLI, and shows which projects need attention, without changing your sites.
 
 > [!NOTE]
-> PressRoom is in early development (0.1.0). This release discovers and explains updates. Plugin update policies, protected updates, GitLab, and deployment-integrity features are on the way.
+> PressRoom is in early development (0.2.0). It discovers and explains updates and lets you set update policies. Applying updates with recovery points, GitLab, and deployment-integrity features are on the way.
 
 ## What it does today
 
 - **Add projects in a few clicks.** Choose a WordPress folder. PressRoom recognizes LocalWP, MAMP / MAMP PRO, Bedrock-style, and custom setups, and picks the PHP build your site actually uses.
 - **Tests the connection safely.** Read-only checks of PHP, WP-CLI, the WordPress files, and the database, with plain-language guidance when something's off (for example, "LocalWP's database server may not be running").
 - **Scans for updates.** Core, plugins, and themes, including updates that need a manually downloaded package. Partial scans are labeled as partial, never as "up to date."
+- **Respects how each plugin should be maintained.** Mark plugins and themes Never Update, License-Managed, or Require Manual Package. PressRoom enforces those choices, detects Composer-managed and Git-committed components, and checks vendor ZIPs before accepting them.
 - **Shows what needs you first.** A dashboard that highlights projects with updates, connection problems, or missing scans.
 - **Stays out of your projects.** PressRoom stores its data in `~/Library/Application Support/PressRoom` and never writes inside your WordPress folders. Git details are read from `.git` files; PressRoom never commits, pushes, or fetches.
 
