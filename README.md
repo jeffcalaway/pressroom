@@ -1,3 +1,5 @@
+<p align="center"><img src="images/PressRoom.png" width="128" height="128" alt="PressRoom app icon"></p>
+
 # PressRoom
 
 A native macOS app for keeping WordPress projects updated, tested, and deployment-ready.
@@ -32,4 +34,4 @@ PressRoom runs entirely on your Mac. It has no account, analytics, or telemetry.
 
 ## License
 
-PressRoom is free to use, including professionally, under the [PressRoom Proprietary Freeware License](LICENSE.md). Third-party components are listed in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt). PressRoom is not affiliated with the WordPress Foundation, WP Engine, Local, MAMP, GitLab, or GitHub.
+PressRoom is free to use, including professionally, under the [PressRoom Proprietary Freeware License](LICENSE.md). Third-party components are listed in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt). WordPress and the WordPress logo are trademarks of the WordPress Foundation. PressRoom is not affiliated with the WordPress Foundation, WP Engine, Local, MAMP, GitLab, or GitHub.

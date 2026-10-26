@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
+
 ## 0.2.0 — Update policies
 
 - Choose how each plugin and theme may be updated: Update Normally, Never Update (with a reason), Require Manual Package, or License-Managed.
