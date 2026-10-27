@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **Apply updates safely.** Review Updates lets you choose updates and confirm what will change and how it's protected. PressRoom then applies them one at a time: it checks Git for uncommitted work, copies each update's files first, exports the database, and verifies the site afterward (WordPress loads, the right version is installed, pages respond as before, no new PHP errors).
+- Runs pause for a ZIP or a license when needed, with Set License, Retry Update, Use a ZIP Instead, Skip, and Stop.
+- Clear results for every update, with the evidence behind any problem and one-click Restore Previous Files or Restore Database.
+- Update history in each project, with recovery points kept for the last 10 runs (configurable in Settings).
+- Choose extra pages to check after updates in each project's settings.
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
 - License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
