@@ -2,9 +2,8 @@
 
 ## Unreleased
 
-- **Deployment readiness.** A new Deployment tab shows what each environment (dev, staging, production) is running, recent GitLab pipelines, and how far each update you've applied has come: committed, pushed, deployed to staging, then production. Updates that won't deploy through Git, such as Composer-managed plugins, say why.
-- The Deployment tab also shows open merge requests, marks protected branches, follows updates waiting in a merge request, and refreshes itself while a pipeline or deployment is running. A project's settings can link it to a different GitLab project.
-- **Sign in with GitLab** in Settings for read-only access to your projects' pipelines and deployments (no setup needed), or use a personal access token. Nothing on GitLab is ever changed.
+- **Integrity checks and cleanup.** The Integrity section finds files left on your staging and production servers after they were removed from the repository, such as old plugin files and deleted themes, and shows the commit that removed each one. Scans only read. When you choose to clean up, PressRoom backs the files up to your Mac first, removes them, checks the site still loads, and lets you restore them with one click. PressRoom confirms on the server that everything is gone (and tells you exactly what isn't), shows fun animations while scanning and cleaning up, and deletes cleanup backups after 30 days (adjustable in Settings).
+- **Sign in with GitLab** in Settings (no setup needed), so PressRoom knows which version of your code each server runs. It's read-only: nothing on GitLab is ever changed.
 - **Apply updates safely.** Review Updates lets you choose updates and confirm what will change and how it's protected. PressRoom then applies them one at a time: it checks Git for uncommitted work, copies each update's files first, exports the database, and verifies the site afterward (WordPress loads, the right version is installed, pages respond as before, no new PHP errors).
 - Runs pause for a ZIP or a license when needed, with Set License, Retry Update, Use a ZIP Instead, Skip, and Stop.
 - Clear results for every update, with the evidence behind any problem and one-click Restore Previous Files or Restore Database.
