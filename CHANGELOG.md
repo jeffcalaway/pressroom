@@ -7,6 +7,8 @@
 - Clear results for every update, with the evidence behind any problem and one-click Restore Previous Files or Restore Database.
 - Update history in each project, with recovery points kept for the last 10 runs (configurable in Settings).
 - Choose extra pages to check after updates in each project's settings.
+- A live progress bar shows how far an update run has come.
+- Fixed page checks for sites served over plain HTTP (most local sites), which were blocked and left updates only partly verified.
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
 - License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
