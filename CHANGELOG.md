@@ -15,7 +15,7 @@
 - Update run folders are named by date, time, and project, so you can find a run in Finder.
 - Reviewing screenshots is more fun: animated checkmarks, a "Looks good" sticker, and confetti when you finish.
 - A cleaner Settings page.
-- Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Archive pages and category, tag, and other term pages are listed too, and posts can be narrowed to one category or term. Clear All starts the list over.
+- Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Archive pages and category, tag, and other term pages are listed too, and posts can be narrowed to one category or term. Clear All starts the list over. The homepage appears as the first page and can't be removed, and a counter shows how many of the 10 pages you've used.
 - Fixed page checks for sites served over plain HTTP (most local sites), which were blocked and left updates only partly verified.
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
