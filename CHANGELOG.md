@@ -8,6 +8,7 @@
 - A Licenses list in each project's Updates tab, with a Set License button for each plugin. For an inactive plugin, whose license page doesn't exist yet, the button opens the Plugins page and explains what to activate first.
 - Update plans show what will run unattended, where the run will pause for a ZIP or a license, and what's held back.
 - License-Managed is no longer an update method: PressRoom now handles licenses automatically for every plugin. Plugins that used it switch to Update Normally and keep their notes and prepared ZIPs.
+- Reverse the Projects list's sort order with the button beside the Sort menu.
 - A Composer tab lists the plugins and themes Composer installs.
 - Simpler Updates tabs: Special Handling lists everything that isn't updated the normal way, and updates blocked by the site's PHP or WordPress version appear under Needs Review.
 - Symlinked plugins and themes are labeled "Symlinked" and left out of updates.
