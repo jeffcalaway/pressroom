@@ -10,7 +10,7 @@
 - License-Managed is no longer an update method: PressRoom now handles licenses automatically for every plugin. Plugins that used it switch to Update Normally and keep their notes and prepared ZIPs.
 - Reverse the Projects list's sort order with the button beside the Sort menu.
 - A Composer tab lists the plugins and themes Composer installs.
-- Simpler Updates tabs: Special Handling lists everything that isn't updated the normal way, and updates blocked by the site's PHP or WordPress version appear under Needs Review.
+- Simpler Updates tabs: Special Handling lists plugins and themes set to Never Update or Require Manual Package, or symlinked (Composer ones have their own tab), and updates blocked by the site's PHP or WordPress version appear under Needs Review.
 - Symlinked plugins and themes are labeled "Symlinked" and left out of updates.
 - Neater plugin lists: versions, statuses, and buttons line up in columns.
 - Updated brand colors and a clearer selection indicator in update settings.
