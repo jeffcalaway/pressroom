@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Deployment readiness.** A new Deployment tab shows what each environment (dev, staging, production) is running, recent GitLab pipelines, and how far each update you've applied has come: committed, pushed, deployed to staging, then production. Updates that won't deploy through Git, such as Composer-managed plugins, say why.
+- **Sign in with GitLab** in Settings for read-only access to your projects' pipelines and deployments, or use a personal access token. Nothing on GitLab is ever changed.
 - **Apply updates safely.** Review Updates lets you choose updates and confirm what will change and how it's protected. PressRoom then applies them one at a time: it checks Git for uncommitted work, copies each update's files first, exports the database, and verifies the site afterward (WordPress loads, the right version is installed, pages respond as before, no new PHP errors).
 - Runs pause for a ZIP or a license when needed, with Set License, Retry Update, Use a ZIP Instead, Skip, and Stop.
 - Clear results for every update, with the evidence behind any problem and one-click Restore Previous Files or Restore Database.
