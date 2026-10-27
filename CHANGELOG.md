@@ -8,6 +8,13 @@
 - Update history in each project, with recovery points kept for the last 10 runs (configurable in Settings).
 - Choose extra pages to check after updates in each project's settings.
 - A live progress bar shows how far an update run has come.
+- Optional before-and-after screenshots of your key pages, compared in the app when the run ends (side by side, with a slider, or with changes highlighted), then deleted with one click. A playful camera animation shows progress while screenshots are taken.
+- Bigger, easier switches for every on/off option. Only the switch itself toggles.
+- A scanning animation shows each step of a project scan as it happens.
+- Update run folders are named by date, time, and project, so you can find a run in Finder.
+- Reviewing screenshots is more fun: animated checkmarks, a "Looks good" sticker, and confetti when you finish.
+- A cleaner Settings page.
+- Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Clear All starts the list over.
 - Fixed page checks for sites served over plain HTTP (most local sites), which were blocked and left updates only partly verified.
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
