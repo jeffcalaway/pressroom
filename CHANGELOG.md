@@ -8,14 +8,14 @@
 - Update history in each project, with recovery points kept for the last 10 runs (configurable in Settings).
 - Choose extra pages to check after updates in each project's settings.
 - A live progress bar shows how far an update run has come.
-- Optional before-and-after screenshots of your key pages, compared in the app when the run ends (side by side, with a slider, or with changes highlighted), then deleted with one click. A playful camera animation shows progress while screenshots are taken.
+- Optional before-and-after screenshots of your key pages, compared in the app when the run ends (side by side, with a slider, or with changes highlighted), then deleted with one click. A playful camera animation shows progress while screenshots are taken. Screenshots wait until each page has fully loaded and finished styling, so nothing is caught half-styled.
 - Bigger, easier switches for every on/off option. Only the switch itself toggles, and it animates between on and off.
 - A scanning animation shows each step of a project scan as it happens, and Scan All on the Updates page shows every project's progress.
 - On the Updates page, click anywhere on a project's header to open it; project headers stand out more from their updates.
 - Update run folders are named by date, time, and project, so you can find a run in Finder.
 - Reviewing screenshots is more fun: animated checkmarks, a "Looks good" sticker, and confetti when you finish.
 - A cleaner Settings page.
-- Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Archive pages and category, tag, and other term pages are listed too, and posts can be narrowed to one category or term. Clear All starts the list over. The homepage appears as the first page and can't be removed, and a counter shows how many of the 10 pages you've used, in the list and while choosing pages. When the list is full, Choose Pages explains why and how to make room.
+- Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Archive pages and category, tag, and other term pages are listed too, and posts can be narrowed to one category or term. Clear All starts the list over. The homepage appears as the first page and can't be removed, and a counter shows how many of the 10 pages you've used, in the list and while choosing pages. In Choose Pages, pages already on your list can be turned off to make room, and the checked pages are shown at the top, where one click unchecks one (or checks it again).
 - Fixed page checks for sites served over plain HTTP (most local sites), which were blocked and left updates only partly verified.
 - New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
 - Plugins show their own icons, and themes show their screenshots.
