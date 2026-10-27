@@ -7,6 +7,8 @@
 - License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
 - A Licenses list in each project's Updates tab, with a Set License button for each plugin. For an inactive plugin, whose license page doesn't exist yet, the button opens the Plugins page and explains what to activate first.
 - Update plans show what will run unattended, where the run will pause for a ZIP or a license, and what's held back.
+- License-Managed is no longer an update method: PressRoom now handles licenses automatically for every plugin. Plugins that used it switch to Update Normally and keep their notes and prepared ZIPs.
+- A Composer tab lists the plugins and themes Composer installs.
 - Symlinked plugins and themes are labeled "Symlinked" and left out of updates.
 - Neater plugin lists: versions, statuses, and buttons line up in columns.
 - Updated brand colors and a clearer selection indicator in update settings.
