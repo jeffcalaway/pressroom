@@ -3,6 +3,7 @@
 ## Unreleased
 
 - **Integrity checks and cleanup.** The Integrity section finds files left on your staging and production servers after they were removed from the repository, such as old plugin files and deleted themes, and shows the commit that removed each one. Scans only read. When you choose to clean up, PressRoom backs the files up to your Mac first, removes them, checks the site still loads, and lets you restore them with one click. PressRoom confirms on the server that everything is gone (and tells you exactly what isn't), shows fun animations while scanning and cleaning up, and deletes cleanup backups after 30 days (adjustable in Settings).
+- **SSH setup built in.** If a server doesn't recognize your Mac yet, PressRoom creates an SSH key, copies it for you, opens your host's SSH Keys page, and tests the connection until it works.
 - **Sign in with GitLab** in Settings (no setup needed), so PressRoom knows which version of your code each server runs. It's read-only: nothing on GitLab is ever changed.
 - **Apply updates safely.** Review Updates lets you choose updates and confirm what will change and how it's protected. PressRoom then applies them one at a time: it checks Git for uncommitted work, copies each update's files first, exports the database, and verifies the site afterward (WordPress loads, the right version is installed, pages respond as before, no new PHP errors).
 - Runs pause for a ZIP or a license when needed, with Set License, Retry Update, Use a ZIP Instead, Skip, and Stop.
