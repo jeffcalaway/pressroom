@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 — 2026-10-28
+
+- **Add several projects at once.** Add Several… finds every WordPress site in a folder (such as ~/Sites or MAMP's htdocs) or in Local, detects each one's environment, and adds the ones you choose, then scans them.
+- **Update several projects at once.** Update Projects… on the Updates page applies updates to the projects you choose, one at a time, each with its usual backups, checks, and report. Updates that need a ZIP or a license are left out unless you include them, so it can run unattended.
+
 ## 1.1.2 — 2026-10-28
 
 - The sidebar can't be squeezed narrower than its header: the PressRoom name and "WordPress Update Center" always fit on one line each.

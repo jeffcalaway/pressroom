@@ -75,7 +75,11 @@ That's it. Until you add one, PressRoom shows this:
 
 <p align="center"><img src="images/welcome.png" width="820" alt="The Welcome screen with an Add Your First Project button"></p>
 
- Every project you add appears in **Projects**, and the sidebar takes you everywhere else.
+Every project you add appears in **Projects**, and the sidebar takes you everywhere else.
+
+### Adding several sites at once
+
+Have a folder full of sites? Click **Add Several…** on the Projects page (or **File › Add Several Projects…**, ⇧⌘N) and choose **Sites in Local** or **Sites in a Folder…**, such as `~/Sites` or MAMP's `htdocs`. PressRoom finds every WordPress site there (looking two levels deep), detects each one's environment, and lists them with a switch each. Sites already in PressRoom are marked so they aren't added twice. Click **Add**, and PressRoom scans each new project, a few at a time.
 
 ## What PressRoom does
 
@@ -128,7 +132,9 @@ When the run is done you get a **report**: each update with what passed, what fa
 
 <p align="center"><img src="images/update-report.png" width="620" alt="An update run report: two updates verified, and one with a possible problem and the PHP warning it caused"></p>
 
- If something broke, **Restore Previous Files** puts the plugin back as it was, and **Restore Database** restores the export from before the run. If you stopped a run, or quit PressRoom in the middle of one, **Resume Remaining Updates** picks up where it left off.
+If something broke, **Restore Previous Files** puts the plugin back as it was, and **Restore Database** restores the export from before the run. If you stopped a run, or quit PressRoom in the middle of one, **Resume Remaining Updates** picks up where it left off.
+
+**Updating several projects.** Click **Update Projects…** on the Updates page (or **Project › Update Projects…**, ⇧⌘U), choose the projects, and PressRoom updates them one at a time, each with the same safety net and its own report. By default it applies only the updates that run without stopping, so you can leave it running; turn on **Include updates that need a ZIP or a license** to have it pause for those. You can close the window while it works: the Updates page shows how far it's got, and **Stop After This Project** finishes the current project and starts no more.
 
 ### Before-and-after screenshots
 
