@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2 — 2026-10-28
+
+- The sidebar can't be squeezed narrower than its header: the PressRoom name and "WordPress Update Center" always fit on one line each.
+
 ## 1.1.1 — 2026-10-28
 
 - In Compare's Custom mode, the first site is now blue and the second red.
