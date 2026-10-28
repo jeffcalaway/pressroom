@@ -123,7 +123,7 @@ Choose the updates you want and click **Review Updates**. PressRoom shows what w
 Then it applies the updates one at a time:
 
 1. **Before anything changes,** it checks the site is working, makes sure there's enough disk space, and exports your database (always for WordPress core updates; optional otherwise).
-2. **Before each update,** it checks Git for uncommitted work (and skips the update rather than overwrite your changes), then copies the files that are about to be replaced.
+2. **Before each update,** it copies the files that are about to be replaced, uncommitted Git changes included. Like `wp plugin update`, the update goes ahead over uncommitted changes; the report says which files had them, and **Restore Previous Files** brings them back.
 3. **After each update,** it checks that WordPress still loads, the right version is installed, your pages respond as they did before, and no new PHP errors appeared.
 
 If an update needs something from you (a license, a ZIP, or your site was stopped partway through), the run **pauses** and asks, rather than failing. Plugins that depend on another plugin are updated after it, and skipped if it couldn't be updated.
@@ -242,7 +242,7 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 
 **A scan says WP-CLI or PHP wasn't found.** Open the project's **Settings** tab, click **Detect Again**, or choose PHP and WP-CLI yourself. If WP-CLI is missing, PressRoom installs it there for you; if that download fails (for example, you're offline), click **Try Again**.
 
-**A server I added to `wp-cli.yml` doesn't show up.** PressRoom reads a project's aliases when you add it. After editing `wp-cli.yml`, click **Check wp-cli.yml Again** on the project's Overview (or in its **⋯** menu, or on the Compare and Integrity pages). It lists what was added, changed, or removed, and new servers appear in Compare and Integrity right away.
+**A server I added to `wp-cli.yml` doesn't show up.** PressRoom reads a project's aliases when you add it. After editing `wp-cli.yml`, click **Check Again** on the project's Overview, beside WP-CLI aliases (it's also in the project's **⋯** menu, and on the Compare and Integrity pages). New, changed, and removed aliases are listed there, and new servers appear in Compare and Integrity right away; if nothing changed, a message at the bottom of the window says so.
 
 **Integrity says the server didn't answer.** Some hosts only accept SSH from approved addresses. PressRoom tells you if that's likely, and whether you have a VPN that isn't connected.
 

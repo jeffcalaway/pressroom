@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.2 — 2026-10-28
+
+- **Integrity no longer quits PressRoom** on sites where a folder is a symbolic link in your local copy (a linked plugin, for example). Files on the server inside such a folder now count as ignored.
+- **Updates go ahead over uncommitted Git changes,** as `wp plugin update` does, instead of being skipped. The report says which files had changes (they're kept in the update's recovery point, so **Restore Previous Files** brings them back).
+- **Skipped updates stand out.** A run that skipped something says so at the top of its report, with each update and why; skipped updates are amber and show their reason without opening them; and the notification names them.
+- **Check Again** (for a project's wp-cli.yml) is shorter, and says "up to date" or "no wp-cli.yml found" in a brief message at the bottom of the window instead of on the page.
+
 ## 1.4.1 — 2026-10-28
 
 - **Check wp-cli.yml again.** After adding, changing, or removing servers in a project's `wp-cli.yml`, click **Check wp-cli.yml Again** on its Overview, in its **⋯** menu, or on the Compare and Integrity pages. PressRoom says what was added, changed, or removed, and new servers are ready to compare and scan.
