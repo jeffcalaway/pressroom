@@ -37,11 +37,14 @@ Everything happens on your Mac. There's no account, no subscription, and nothing
 3. Drag **PressRoom** onto **Applications**.
 4. Open PressRoom from your Applications folder (or Launchpad, or Spotlight).
 
-**The first time you open it,** macOS may say it can't check PressRoom for malicious software. That's because PressRoom isn't registered with Apple's paid developer program, not because anything is wrong. To open it:
+**The first time you open it,** macOS shows a message titled **"PressRoom" Not Opened**, saying *Apple could not verify "PressRoom" is free of malware.* That's because PressRoom isn't registered with Apple's paid developer program, not because anything is wrong. To open it:
 
-1. Click **Done** (or **OK**), not Move to Trash.
+1. Click **Done**, not Move to Trash.
 2. Open **System Settings › Privacy & Security**.
-3. Scroll down to the message about PressRoom and click **Open Anyway**, then confirm.
+3. Scroll to the **Security** section near the bottom. Next to *"PressRoom" was blocked to protect your Mac*, click **Open Anyway**.
+4. Enter your password or use Touch ID, then click **Open**.
+
+Right-clicking the app and choosing Open doesn't skip this on recent versions of macOS; Open Anyway is the way.
 
 You only need to do this once. After that, PressRoom opens normally and keeps itself up to date.
 
@@ -224,7 +227,7 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 
 ## Troubleshooting
 
-**macOS won't open PressRoom.** See the [first-launch steps](#install) above: **System Settings › Privacy & Security › Open Anyway**.
+**macOS says "PressRoom" Not Opened.** See the [first-launch steps](#install) above: **System Settings › Privacy & Security › Open Anyway**, near the bottom.
 
 **"WordPress couldn't connect to its database."** Your local site isn't running. Start it in Local or MAMP and try again. If this happens during an update run, the run pauses; click **Retry Update** once the site is running.
 
