@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Compare: tell it CSS selectors to ignore, such as sliders or chat widgets, and they're hidden on both environments so they don't count as differences.
+- **Menu bar icon.** See what PressRoom is working on, with progress, from the menu bar; turn notifications on or off, open Settings, or quit. Right-click it for a quick menu, including Quit. Hide it from its own menu, and bring it back in Settings.
+- Choose Light, Dark, or System appearance, and have PressRoom open at login (off by default), in Settings › General.
+- **Notifications.** PressRoom tells you when a scan, update run, integrity scan or cleanup, or comparison finishes, or when a run needs you. Choose which in Settings, and override them per project (or turn them off) in each project's settings.
+- Compare: choose sections per page, alongside or instead of the whole page; clear the preset pages in one click; compare against any address with Custom; Cancel discards a comparison in progress; and Review is now the main button once results are in.
+- Screenshots and comparisons are deleted automatically after 14 days (adjustable in Settings), and can be deleted all at once.
+- A friendlier project switcher, with each project's theme screenshot.
+- **Compare environments.** A new Compare section shows your pages on two environments side by side, such as your local site and staging: how they look on desktop and phone, how different each one is, and which JavaScript errors only one of them throws. Add any page just for comparing, or focus on parts of pages, like the header or a form, by their CSS selector. Server addresses are filled in from wp-cli.yml, GitLab, or WP Engine when possible, and you can type one in. It only loads pages, like a visitor would.
 - **Browser checks with your screenshots.** Pages are now captured at phone width as well as desktop (you can turn this off per project), and PressRoom flags JavaScript errors that appear after a run, naming the plugin or theme whose script threw them. In the review, drag over things that change on their own, like sliders or dates, to leave them out of comparisons, or list CSS selectors in project settings to hide them before every screenshot.
 - **Safer update runs.** Plugins that depend on another plugin now update after it, and are skipped if it didn't update. If your local site stops mid-run, PressRoom pauses with Retry instead of failing. A run you stopped, or one interrupted by quitting, can be resumed with one click. When a run pauses while you're in another app, a notification tells you why.
 - Scanning and cleanup animations start smoothly instead of stuttering as they appear.
