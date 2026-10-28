@@ -1,12 +1,13 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-10-28
 
 - Compare has no page limit: add as many pages as you like. The 10-page limit applies only to the pages checked after updates.
 - Compare opens on **Custom**: compare any two addresses, no project needed. Pick it again from the project menu any time.
 - A project's Compare list now starts empty. **Import Project Pages** adds its homepage and pages to check in one click.
 - The sidebar button no longer looks squeezed on macOS 26 and later.
-
+- Simpler sorting on the Projects page: one **Sort by** menu lists every order by name ("Name, A to Z", "Name, Z to A", "Recently scanned first", and so on), replacing the separate reverse button that changed the menu's options.
+- The Projects list fits a narrow window: "Sort by" stays on one line, and project names keep their room (the Environment and Last Scan columns step aside until the window is wider).
 
 ## 1.0.0 — 2026-10-28
 
