@@ -154,10 +154,10 @@ Choose which pages are checked in the project's **Settings** tab. Screenshots ar
 
 ### Compare environments
 
-**Compare** shows the same pages on two versions of a site side by side, such as your local site and staging, or staging and production. It's a quick way to answer "does staging look like my local site?" before you deploy, or "what's different on production?" after.
+**Compare** shows the same pages on two versions of a site side by side, such as your local site and staging, staging and production, or any two addresses. It's a quick way to answer "does staging look like my local site?" before you deploy, or "what's different on production?" after.
 
-1. Pick a project and the two environments. Servers come from your project's `wp-cli.yml`, and their addresses are filled in when PressRoom can find them (from `wp-cli.yml`, GitLab, or WP Engine). You can type any address with **Custom**.
-2. Choose the pages. The homepage and your project's pages are there already; **Add Page** or **Choose from Site** adds others, and **Clear Presets** starts from just yours.
+1. Choose what to compare. Compare opens on **Custom**: type any two addresses, such as the live site and a redesign, no project needed. Or pick a project to compare its environments: servers come from its `wp-cli.yml`, and their addresses are filled in when PressRoom can find them (from `wp-cli.yml`, GitLab, or WP Engine). You can still type any address with the project's **Custom** option.
+2. Add the pages. The list starts empty. **Add Page** takes a path, like `/contact/`, or a full address from either site. With a project, **Import Project Pages** adds its homepage and pages to check in one click, and **Choose from Site** picks from its published content.
 3. Optionally, focus on **sections**: add a CSS selector to a page, such as `header` or `.donate-form`, to compare just that part. Each page loads once, however many sections it has.
 4. Optionally, **Ignore** CSS selectors for things that change on their own, like sliders or chat widgets. They're hidden on both sides.
 5. Click **Compare**. PressRoom loads each page on both environments (it only looks, like a visitor) and shows which match, which look different, and which have JavaScript errors only one side throws.

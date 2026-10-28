@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Compare has no page limit: add as many pages as you like. The 10-page limit applies only to the pages checked after updates.
+- Compare opens on **Custom**: compare any two addresses, no project needed. Pick it again from the project menu any time.
+- A project's Compare list now starts empty. **Import Project Pages** adds its homepage and pages to check in one click.
+- The sidebar button no longer looks squeezed on macOS 26 and later.
+
+
 ## 1.0.0 — 2026-10-28
 
 The first public release.
