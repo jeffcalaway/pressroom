@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- **A new PressRoom Tour: watch it done.** Instead of a series of spotlights, a guide's cursor now sets PressRoom up in front of you, at a pace you can follow: adding your sites, choosing how a customized plugin updates, picking the pages to check, running an update, reviewing its screenshots, cleaning up a server, and comparing local with production. Each click lights up, and each step has a short caption. Steps play on their own at the pace you choose (Relaxed, Normal, or Brisk), or turn Autoplay off and press Next; Space pauses. Jump to any milestone from the bar at the bottom. To see just one feature (adding sites, how plugins update, pages and screenshots, updating, reviewing screenshots, cleaning up a server, or comparing), choose it from **Tour a Feature** in **Settings › General › Feature tour** or the Help menu; it plays that feature alone and ends there.
+- **A nicer "up to date" message.** The brief message at the bottom of the window is now a compact pill with a colored badge whose check draws itself, a ring that counts down its few seconds, a short title, and a line of detail.
+
 ## 1.4.2 — 2026-10-28
 
 - **Integrity no longer quits PressRoom** on sites where a folder is a symbolic link in your local copy (a linked plugin, for example). Files on the server inside such a folder now count as ignored.
