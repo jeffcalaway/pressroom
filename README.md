@@ -57,7 +57,7 @@ You only need to do this once. After that, PressRoom opens normally and keeps it
 
 ## Your first project
 
-The first time you open PressRoom, a short tour introduces it: what it does, how updates work, and a few choices worth making up front (notifications, the menu bar icon, opening at login, and automatic updates). It ends with a button to add your first project. You can see it again any time from **Help › Welcome Tour**.
+The first time you open PressRoom, a short welcome introduces it: what it does, how updates work, and a few choices worth making up front (notifications, the menu bar icon, opening at login, and automatic updates). It then offers the **PressRoom Tour**, where PressRoom shows you around itself: the real app, running on three made-up sites, scans them, updates one, compares two of their pages, and visits Integrity and Settings, pointing out each feature as it goes, so you don't miss anything helpful. It's entirely simulated (your projects, sites, servers, and settings aren't touched, and the made-up sites are deleted afterward), and you can skip it or leave it at any point. Take it again any time from **Settings › General › Feature tour** or **Help › PressRoom Tour**; the welcome is under **Help › Welcome Tour**.
 
 <p align="center">
   <img src="images/onboarding-welcome.png" width="400" alt="The tour's first page: Welcome to PressRoom">
@@ -210,12 +210,13 @@ Don't want it? Choose **Hide Menu Bar Icon**; bring it back in **Settings › Ge
 
 <p align="center"><img src="images/settings.png" width="640" alt="Settings: appearance, open at login, the menu bar icon, and PressRoom updates"></p>
 
-- **General:** Light, Dark, or System appearance; open PressRoom at login; show or hide the menu bar icon.
+- **General:** Light, Dark, or System appearance; open PressRoom at login; show or hide the menu bar icon; and **Take the Tour** to have PressRoom show you around again (on made-up sites, so nothing real is touched).
 - **Updates:** check for new versions of PressRoom automatically, and download them automatically.
 - **Notifications:** what PressRoom tells you about.
 - **Updates and Recovery:** export the database before update runs, take screenshots by default, and how many past runs to keep.
 - **Screenshots:** how long screenshots and comparisons are kept, and how much space they use.
 - **Integrity, SSH, and GitLab:** how long cleanup backups are kept, PressRoom's SSH key, and your GitLab sign-in.
+- **Diagnostics:** PressRoom's log and the reports it saves when something goes wrong, with **Export…** to share them.
 
 ### Keeping PressRoom up to date
 
@@ -232,6 +233,8 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 - PressRoom never commits, pushes, or fetches with Git unless you click **Fetch from origin** in Integrity.
 
 ## Troubleshooting
+
+**PressRoom crashed, or a scan or update failed.** PressRoom keeps a diagnostics log of what it does, and saves a report on its own whenever a scan, update run, integrity scan or cleanup, or comparison fails or is stopped, or when PressRoom quits unexpectedly (with macOS's crash report, when there is one). After an unexpected quit, PressRoom says so when it opens again. To get help, open **Settings › Diagnostics** (or **Help › Export Diagnostics…**), click **Export…**, and share the `.zip` it saves. It includes site names, folder paths, and server addresses, but never passwords, keys, or license keys. Everything stays on your Mac (in `~/Library/Logs/PressRoom`) until you share it.
 
 **macOS says "PressRoom" Not Opened.** See the [first-launch steps](#install) above: **System Settings › Privacy & Security › Open Anyway**, near the bottom.
 
