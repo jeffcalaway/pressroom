@@ -242,6 +242,8 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings â€
 
 **A scan says WP-CLI or PHP wasn't found.** Open the project's **Settings** tab, click **Detect Again**, or choose PHP and WP-CLI yourself. If WP-CLI is missing, PressRoom installs it there for you; if that download fails (for example, you're offline), click **Try Again**.
 
+**A server I added to `wp-cli.yml` doesn't show up.** PressRoom reads a project's aliases when you add it. After editing `wp-cli.yml`, click **Check wp-cli.yml Again** on the project's Overview (or in its **â‹¯** menu, or on the Compare and Integrity pages). It lists what was added, changed, or removed, and new servers appear in Compare and Integrity right away.
+
 **Integrity says the server didn't answer.** Some hosts only accept SSH from approved addresses. PressRoom tells you if that's likely, and whether you have a VPN that isn't connected.
 
 **An update didn't install.** Updates install only when PressRoom is in your Applications folder. If it's running from the installer or your Downloads folder, drag it into Applications, open it from there, and update again.

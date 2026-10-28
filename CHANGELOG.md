@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1 — 2026-10-28
+
+- **Check wp-cli.yml again.** After adding, changing, or removing servers in a project's `wp-cli.yml`, click **Check wp-cli.yml Again** on its Overview, in its **⋯** menu, or on the Compare and Integrity pages. PressRoom says what was added, changed, or removed, and new servers are ready to compare and scan.
+
 ## 1.4.0 — 2026-10-28
 
 - **A much bigger PressRoom Tour.** Ten chapters walk you through everything PressRoom does, live in the real app on made-up sites: adding projects (one or a whole folder), scans, how each plugin updates and its notes and license, the pages every run checks, the update plan, a full update run (database export, backups, screenshots, a pause for a premium plugin's license, a broken page caught and restored in one click), screenshot review (slider, side by side, highlighted changes, script errors traced to their plugin, phone width, ignored areas, and a celebration when you're done), updating several projects, comparing two sites (sections and ignored selectors included), an Integrity scan and cleanup with its backup, Activity, the menu bar, and Settings. A spotlight dims everything but what each step is about, the card sits right beside it, and you can jump to any chapter. It's still entirely simulated: your projects, sites, servers, and settings aren't touched.
