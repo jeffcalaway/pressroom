@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Safer update runs.** Plugins that depend on another plugin now update after it, and are skipped if it didn't update. If your local site stops mid-run, PressRoom pauses with Retry instead of failing. A run you stopped, or one interrupted by quitting, can be resumed with one click. When a run pauses while you're in another app, a notification tells you why.
 - Scanning and cleanup animations start smoothly instead of stuttering as they appear.
 - When a server doesn't answer SSH, PressRoom explains the likely reason: for example, that the server is up but only accepts SSH from approved addresses, and that your VPN isn't connected.
 - **Integrity checks and cleanup.** The Integrity section finds files left on your staging and production servers after they were removed from the repository, such as old plugin files and deleted themes, and shows the commit that removed each one. Scans only read. When you choose to clean up, PressRoom backs the files up to your Mac first, removes them, checks the site still loads, and lets you restore them with one click. PressRoom confirms on the server that everything is gone (and tells you exactly what isn't), shows fun animations while scanning and cleaning up, and deletes cleanup backups after 30 days (adjustable in Settings).
