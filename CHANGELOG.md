@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 — 2026-10-28
+
+- In Compare's Custom mode, the first site is now blue and the second red.
+
 ## 1.1.0 — 2026-10-28
 
 - Compare has no page limit: add as many pages as you like. The 10-page limit applies only to the pages checked after updates.
