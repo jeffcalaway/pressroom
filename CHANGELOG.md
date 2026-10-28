@@ -20,7 +20,7 @@
 - A cleaner Settings page.
 - Adding pages to check is easier: paste full URLs (PressRoom keeps just the path), or choose pages from your site's published content by type (Pages, Posts, and so on), sorted A–Z or newest first. Content without pages of its own, such as testimonials, is left out automatically, and you can hide any other type. Archive pages and category, tag, and other term pages are listed too, and posts can be narrowed to one category or term. Clear All starts the list over. The homepage appears as the first page and can't be removed, and a counter shows how many of the 10 pages you've used, in the list and while choosing pages. In Choose Pages, pages already on your list can be turned off to make room, and the checked pages are shown at the top, where one click unchecks one (or checks it again).
 - Fixed page checks for sites served over plain HTTP (most local sites), which were blocked and left updates only partly verified.
-- New official PressRoom app icon in Finder, the Dock, Launchpad, the About panel, and throughout the app.
+- The finalized PressRoom app icon, made in Icon Composer, so macOS renders it natively with its glass and lighting in Finder, the Dock, Launchpad, and the About panel. The sidebar, Welcome screen, and Settings › About use it too.
 - Plugins show their own icons, and themes show their screenshots.
 - License checks for premium plugins, with a link to each plugin's license settings in your local site's admin when a license is missing, expired, or invalid.
 - A Licenses list in each project's Updates tab, with a Set License button for each plugin. For an inactive plugin, whose license page doesn't exist yet, the button opens the Plugins page and explains what to activate first.
