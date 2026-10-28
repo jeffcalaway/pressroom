@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 — 2026-10-28
 
 - **The PressRoom Tour.** PressRoom shows you around itself: the real app, running on three made-up sites, scans them, updates one (backups, checks, and report included), compares two of their pages, and visits Integrity and Settings, pointing out each feature as it goes. It's offered after the welcome (skip it, or leave at any point) and any time from Settings › General or Help › PressRoom Tour. It's entirely simulated: your projects, sites, servers, and settings aren't touched, and the made-up sites are deleted when the tour ends.
 - **Diagnostics.** PressRoom keeps a log of what it does and saves a report on its own when a scan, update run, integrity scan or cleanup, or comparison fails or is stopped, or when PressRoom quits unexpectedly. Find them in **Settings › Diagnostics**, where **Export…** saves everything as one file to share when you ask for help. If PressRoom quit unexpectedly, it tells you the next time it opens.
