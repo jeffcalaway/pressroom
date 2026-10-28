@@ -1,7 +1,15 @@
 # Changelog
 
-## Unreleased
+## 1.0.0 — 2026-10-28
 
+The first public release.
+
+- **Easy install.** PressRoom comes as a DMG: open it and drag PressRoom into Applications.
+- **A welcome tour** the first time you open PressRoom: what it does, how updates work, notifications and other choices to make up front, and a way to add your first project. See it again from Help › Welcome Tour.
+- **WP-CLI installs itself.** If your Mac doesn't have WP-CLI, PressRoom downloads the official copy for its own use when you add a project or edit its environment, and checks it before using it. No password, and nothing else on your Mac changes.
+- **A new README** with screenshots and plain-language walkthroughs of every feature.
+- The Welcome screen now explains that updates run only when you choose them, each with a backup and checks afterward.
+- **Updates itself.** PressRoom checks for new versions, shows an orange dot on its menu bar icon when one is ready, and installs it in a few seconds from the icon's right-click menu (**Update to PressRoom…**) or **PressRoom › Check for Updates…**. Updates are checked to be genuine PressRoom builds before they're installed. Turn on automatic downloads in Settings › Updates.
 - Compare: tell it CSS selectors to ignore, such as sliders or chat widgets, and they're hidden on both environments so they don't count as differences.
 - **Menu bar icon.** See what PressRoom is working on, with progress, from the menu bar; turn notifications on or off, open Settings, or quit. Right-click it for a quick menu, including Quit. Hide it from its own menu, and bring it back in Settings.
 - Choose Light, Dark, or System appearance, and have PressRoom open at login (off by default), in Settings › General.
