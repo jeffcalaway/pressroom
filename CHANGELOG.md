@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- **Browser checks with your screenshots.** Pages are now captured at phone width as well as desktop (you can turn this off per project), and PressRoom flags JavaScript errors that appear after a run, naming the plugin or theme whose script threw them. In the review, drag over things that change on their own, like sliders or dates, to leave them out of comparisons, or list CSS selectors in project settings to hide them before every screenshot.
 - **Safer update runs.** Plugins that depend on another plugin now update after it, and are skipped if it didn't update. If your local site stops mid-run, PressRoom pauses with Retry instead of failing. A run you stopped, or one interrupted by quitting, can be resumed with one click. When a run pauses while you're in another app, a notification tells you why.
 - Scanning and cleanup animations start smoothly instead of stuttering as they appear.
 - When a server doesn't answer SSH, PressRoom explains the likely reason: for example, that the server is up but only accepts SSH from approved addresses, and that your VPN isn't connected.
