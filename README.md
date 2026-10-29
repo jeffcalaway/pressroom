@@ -14,7 +14,9 @@ Everything happens on your Mac. There's no account, no subscription, and nothing
 - [Your first project](#your-first-project)
 - [What PressRoom does](#what-pressroom-does)
   - [Projects and scans](#projects-and-scans)
+  - [Groups](#groups)
   - [Updates](#updates)
+  - [Saved licenses](#saved-licenses)
   - [Applying updates safely](#applying-updates-safely)
   - [Before-and-after screenshots](#before-and-after-screenshots)
   - [Compare environments](#compare-environments)
@@ -57,7 +59,7 @@ You only need to do this once. After that, PressRoom opens normally and keeps it
 
 ## Your first project
 
-The first time you open PressRoom, a short welcome introduces it: what it does, how updates work, and a few choices worth making up front (notifications, the menu bar icon, opening at login, and automatic updates). It then offers the **PressRoom Tour**: a guide's cursor sets PressRoom up while you watch, on a few made-up sites, the way a colleague would show you a first session. It adds the sites, decides how a customized plugin should update, picks the pages each update checks, runs an update (pausing for a premium plugin's license, catching a broken page, and undoing it in one click), reviews the before-and-after screenshots, cleans up a server's leftover files, and compares local with production. Each click lights up where it lands and each step says why in a sentence or two. Steps play on their own (choose Relaxed, Normal, or Brisk, or turn Autoplay off and press Next), Space pauses, and the milestones along the bottom jump to any part. It's entirely simulated (your projects, sites, servers, and settings aren't touched, and the made-up sites are deleted afterward), and you can leave it at any point. Take it again any time from **Settings › General › Feature tour** or **Help › PressRoom Tour**, or watch just one feature on its own with **Tour a Feature**; the welcome is under **Help › Welcome Tour**.
+The first time you open PressRoom, a short welcome introduces it: what it does, how updates work, and a few choices worth making up front (notifications, the menu bar icon, opening at login, and automatic updates). It then offers the **PressRoom Tour**: a guide's cursor sets PressRoom up while you watch, on a few made-up sites, the way a colleague would show you a first session. It adds the sites and groups a client's together, decides how a customized plugin should update, saves a premium plugin's license and adds it to a site in one click, picks the pages each update checks, runs an update (adding that license when the update needs it, catching a broken page, and undoing it in one click), reviews the before-and-after screenshots, cleans up a server's leftover files, and compares local with production. Each click lights up where it lands and each step says why in a sentence or two. Steps play on their own (choose Relaxed, Normal, or Brisk, or turn Autoplay off and press Next), Space pauses, the 10-second buttons (or ⇧← and ⇧→) skip back and ahead like a video, and the milestones along the bottom jump to any part. When it ends, **Restart** plays it again on fresh made-up sites. It's entirely simulated (your projects, sites, servers, and settings aren't touched, and the made-up sites are deleted afterward), and you can leave it at any point. Take it again any time from **Settings › General › Feature tour** or **Help › PressRoom Tour**, or watch just one feature on its own with **Tour a Feature**; the welcome is under **Help › Welcome Tour**.
 
 <p align="center">
   <img src="images/onboarding-welcome.png" width="400" alt="The tour's first page: Welcome to PressRoom">
@@ -79,7 +81,7 @@ Every project you add appears in **Projects**, and the sidebar takes you everywh
 
 ### Adding several sites at once
 
-Have a folder full of sites? Click **Add Several…** on the Projects page (or **File › Add Several Projects…**, ⇧⌘N) and choose **Sites in Local** or **Sites in a Folder…**, such as `~/Sites` or MAMP's `htdocs`. PressRoom finds every WordPress site there (looking two levels deep), detects each one's environment, and lists them with a switch each. Sites already in PressRoom are marked so they aren't added twice. Click **Add**, and PressRoom scans each new project, a few at a time.
+Have a folder full of sites? Click **Add Several…** on the Projects page (or **File › Add Several Projects…**, ⇧⌘N) and choose **Sites in Local** or **Sites in a Folder…**, such as `~/Sites` or MAMP's `htdocs`. PressRoom finds every WordPress site there (looking two levels deep), detects each one's environment, and lists them with a switch each. Sites already in PressRoom are marked so they aren't added twice. Choose a **Group** to put them in, if you like, then click **Add**, and PressRoom scans each new project, a few at a time.
 
 ## What PressRoom does
 
@@ -93,6 +95,15 @@ A **scan** reads a site and lists its WordPress version, plugins, and themes, wi
 - PressRoom spots premium plugins whose license isn't active (ACF PRO, Gravity Forms, Elementor Pro, SearchWP, and more) and links straight to the right settings page in your site's admin.
 - It notices plugins managed by Composer, files committed to Git, and plugins that need a newer PHP or WordPress, and says so before you try to update them.
 - **Scan All** on the Updates page scans every project at once, with a progress card for each.
+
+### Groups
+
+Keep related projects together, such as one client's sites, or a team's. Click **New Group** on the Projects page, type its name, and drag projects onto it (or right-click a project and choose **Move to Group**). You can also pick a group when you add a project, or in its **Settings**.
+
+- Click a group to fold it away; its header still says how many projects it has and how many need attention.
+- Drag projects and groups into any order. Dragging switches **Sort by** to **Your order**; other orders sort the projects inside each group.
+- Click a group's color square to recolor it: one of the presets, any hex code (such as `#E0563B`), or a color from the color picker. Its menu renames it, scans its projects, or deletes it (its projects stay, in no group).
+- PressRoom remembers your groups, their order, and which are folded, even after you quit.
 
 Click a project to open it. **Overview** shows what's waiting and anything that needs you first, like a license to activate:
 
@@ -114,6 +125,17 @@ You can leave a note on any plugin (for example, "Don't update past 6.2: breaks 
 
 <p align="center"><img src="images/update-policy.png" width="600" alt="A plugin's details: its note, versions, update source, and the update method to choose"></p>
 
+### Saved licenses
+
+Save a premium plugin's license once, and add it to any project's site in a click. Open **Licenses** in the sidebar and click **Save a License**: choose the plugin (PressRoom lists the premium plugins it found in your projects first), paste the key, and choose which projects may use it. Optional details help you find and renew it: **Tags** (type one and press Return; tags you've used before are suggested, and the Licenses page filters by them), the **Vendor account** you sign in with on the vendor's website, the **Vendor website** itself (linked from the license), an expiry date, and how many sites it covers.
+
+When a project's plugin needs its license and it may use one you saved, PressRoom asks, on the project's Overview, its Updates tab, the plugin's details, the update plan, and when an update run pauses for that license. **Add Saved License** puts the key into the plugin on your local site (ACF PRO, Gravity Forms, Elementor Pro, SearchWP, WP All Import Pro, and WP All Export Pro), then scans the site to confirm the vendor accepts it. From a paused run, it tries the download again once the license is in. For other plugins, PressRoom copies the key and opens the plugin's license page for you to paste it.
+
+- **Keys stay in your Mac's Keychain**, never in PressRoom's files or logs. PressRoom shows only a key's last four characters, and asks for Touch ID or your password before showing or copying one; a copied key is cleared from the clipboard after 90 seconds.
+- **You decide where each license goes.** Allow it for every project, or only the ones you choose, on the Licenses page or in each project's **Settings › Licenses**.
+- The Licenses page lists every site ready for a saved license (with **Add All**). Each license can show the projects that have its plugin (folded away until you open it, with a one-line summary), what their sites report, and when PressRoom added it.
+- Only your local sites are changed, and only when you click. Staging and production aren't touched.
+
 ### Applying updates safely
 
 Choose the updates you want and click **Review Updates**. PressRoom shows what will change, what will be backed up, and anything that will need you along the way:
@@ -126,7 +148,7 @@ Then it applies the updates one at a time:
 2. **Before each update,** it copies the files that are about to be replaced, uncommitted Git changes included. Like `wp plugin update`, the update goes ahead over uncommitted changes; the report says which files had them, and **Restore Previous Files** brings them back.
 3. **After each update,** it checks that WordPress still loads, the right version is installed, your pages respond as they did before, and no new PHP errors appeared.
 
-If an update needs something from you (a license, a ZIP, or your site was stopped partway through), the run **pauses** and asks, rather than failing. Plugins that depend on another plugin are updated after it, and skipped if it couldn't be updated.
+If an update needs something from you (a license, a ZIP, or your site was stopped partway through), the run **pauses** and asks, rather than failing. If you've saved that plugin's license, one click adds it and tries again. Plugins that depend on another plugin are updated after it, and skipped if it couldn't be updated.
 
 When the run is done you get a **report**: each update with what passed, what failed, and the evidence. Here, a slider plugin's update installed fine but logged a new PHP warning:
 
@@ -228,7 +250,7 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 
 - **Everything stays on your Mac.** No account, analytics, or tracking.
 - **Scans, comparisons, and integrity scans only read.** Files change only when you apply or restore updates (on your local sites) or confirm a cleanup (on a server, after a backup).
-- **License keys are never read.** License checks look only at whether a license is active.
+- **License keys stay in your Keychain.** Keys you save in PressRoom are kept in your Mac's Keychain, read only to add one to a local site (sent to WP-CLI without appearing on any command line) or to show or copy it after Touch ID or your password. Keys already on your sites are never read: license checks look only at whether a license is active.
 - **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH (only for Integrity), the pages you compare, and GitHub to check for new versions of PressRoom.
 - PressRoom never commits, pushes, or fetches with Git unless you click **Fetch from origin** in Integrity.
 
