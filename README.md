@@ -95,6 +95,7 @@ A **scan** reads a site and lists its WordPress version, plugins, and themes, wi
 - PressRoom spots premium plugins whose license isn't active (ACF PRO, Gravity Forms, Elementor Pro, SearchWP, and more) and links straight to the right settings page in your site's admin.
 - It notices plugins managed by Composer, files committed to Git, and plugins that need a newer PHP or WordPress, and says so before you try to update them.
 - **Scan All** on the Updates page scans every project at once, with a progress card for each.
+- **Scheduled scans** do it for you. Click **Schedule Scans…** on the Updates page (or open **Settings › Schedules**), turn the schedule on, and choose every day, weekdays, or once a week, at an hour. Each project follows that shared schedule, gets its own, or is left out, in the same window or in the project's **Settings**. Schedules run while PressRoom is open (its menu bar icon is enough); one missed while your Mac slept runs when it wakes, and each run sends one notification summing up what it found. Turn on **Open at login** so they keep running after a restart.
 
 ### Groups
 
@@ -122,6 +123,8 @@ Click any plugin or theme to choose how it should be handled:
 - **Require Manual Package:** for plugins you download yourself. PressRoom asks for the ZIP and checks it's the right plugin and a newer version before installing it.
 
 You can leave a note on any plugin (for example, "Don't update past 6.2: breaks the booking form"), and PressRoom shows it wherever that plugin appears.
+
+In a hurry? **Right-click** a plugin or theme on the Updates page or a project's Updates tab and choose its update method for that project straight from the menu. Plugins installed by Composer, symlinked ones, must-use plugins, and drop-ins say why theirs can't change.
 
 **See what an update changes first.** A plugin with an update has a **Changelog** section in its details: click **Show Changelog** to read the notes for the versions the update brings, marked **New**, with earlier versions a click away. PressRoom gets them the way WordPress's **View details** link does, so premium plugins whose vendors answer there (Gravity Forms and its add-ons, ACF PRO, Rank Math PRO, SearchWP, WP All Import Pro, and more) show theirs too. If a plugin doesn't provide one, **Open in WordPress** takes you to its details page on your local site.
 
@@ -164,7 +167,7 @@ If something broke, **Restore Previous Files** puts the plugin back as it was, a
 
 ### Before-and-after screenshots
 
-Turn on screenshots when you review updates, and PressRoom takes a picture of each of your key pages before the first update and after the last, on desktop and on a phone-size screen. When the run ends, **Review Screenshots** shows each page:
+Turn on screenshots when you review updates, and PressRoom takes a picture of each of your key pages before the first update and after the last, on desktop and on a phone-size screen (and a tablet, with a visual profile). When the run ends, **Review Screenshots** shows each page:
 
 - **Side by Side**, a **Slider** you drag across, or **Highlight Changes**, which paints what changed in red.
 - **JavaScript errors** each page throws, with any new ones pointed out, and which plugin's script caused them.
@@ -183,6 +186,8 @@ Each page is also checked at phone width, where you can mark areas to ignore:
 Click **Looks Good, Next Page** as you go; the list on the left shows what's left to review.
 
 Choose which pages are checked in the project's **Settings** tab. Screenshots are temporary: delete them when you're done, or PressRoom deletes them after 14 days.
+
+**Visual profiles** save you setting this up for every site. A profile holds the pages to check (paths such as `/contact/`, which work on any site), the widths to screenshot (desktop, tablet, and phone), elements to hide, and how much change to flag: **Strict** (any visible change), **Balanced** (more than 1% of the page), or **Relaxed** (more than 5%). Create them in **Settings › Visual Profiles**, then choose one in each project's **Visual checks** card, where you can also turn a project's current settings into a profile. A project can add its own pages and hidden elements on top of its profile's. In the review, changes below the limit are still shown, marked "within limit", but only bigger ones are flagged.
 
 ### Compare environments
 
@@ -205,12 +210,16 @@ Click any page for the side-by-side review. Here, staging's Services page is mis
 When you delete a plugin or theme from your Git repository and deploy, the old files often stay on the server. **Integrity** finds them.
 
 1. Sign in to GitLab in **Settings › GitLab** (PressRoom only reads; it can't change your repositories). PressRoom uses it to learn which version of your code each server is running.
-2. Open **Integrity**, pick a project and an environment, and click **Scan**. PressRoom lists the server's files over SSH and compares them with your repository. If your server doesn't recognize this Mac yet, PressRoom walks you through setting up an SSH key.
+2. Open **Integrity**. It starts on **All servers**, every project's servers with what each was compared with and what was found; **Scan All Servers** checks them one after another. Click one (or pick a project and an environment in the project picker) and click **Scan**. PressRoom lists the server's files over SSH and compares them with your repository. If your server doesn't recognize this Mac yet, PressRoom walks you through setting up an SSH key. Hosts that allow SFTP but no shell are noticed and scanned over SFTP.
 3. Files your repository deleted that are still on the server are listed by plugin, theme, or folder, with the commit that removed them. Uploads, caches, WordPress itself, and the site's icons are never listed.
 
    <p align="center"><img src="images/integrity.png" width="820" alt="Integrity on staging: 25,859 files on the server, 582 leftovers, and a removed gallery plugin's folder still on the server with the commit that removed it"></p>
 
-4. To clean up, choose the files and confirm. PressRoom backs them up to your Mac first, checks the backup, removes them, and checks the site still loads. **Restore** puts them back if you need to.
+4. To clean up, choose the files and confirm: a whole folder with its switch, or single files after **Show Files**. PressRoom backs them up to your Mac first, checks the backup, removes them, and checks the site still loads. **Restore** puts them back if you need to.
+
+- **No GitLab deployments?** For a server GitLab doesn't deploy to, or if you don't use GitLab, choose the branch or tag it should be running from the environment's **⋯** menu, and PressRoom compares with that.
+- **Ignore rules** leave files out of a project's scans for good, written like `.gitignore` lines: `wp-content/backups/` for a folder, `*.log` for names anywhere. Right-click a folder or file to ignore it, or click **Ignore Rules** to edit them.
+- **Schedule it.** Click **Schedule…** on All servers to check every server, or just some projects, on a schedule. Scheduled checks only read; nothing is removed without you.
 
 ### Notifications
 
@@ -255,7 +264,7 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 - **Everything stays on your Mac.** No account, analytics, or tracking.
 - **Scans, comparisons, and integrity scans only read.** Files change only when you apply or restore updates (on your local sites) or confirm a cleanup (on a server, after a backup).
 - **License keys are locked with Touch ID.** Keys you save in PressRoom are sealed by your Mac's Secure Enclave and opened only with Touch ID or your password, to add one to a local site (sent to WP-CLI without appearing on any command line) or to show or copy it. Keys already on your sites are never read: license checks look only at whether a license is active.
-- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH (only for Integrity, and for reading another environment's updates if you turn that on), the pages you compare, and GitHub to check for new versions of PressRoom.
+- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH or SFTP (only for Integrity, and for reading another environment's updates if you turn that on), the pages you compare, and GitHub to check for new versions of PressRoom.
 - PressRoom never commits, pushes, or fetches with Git unless you click **Fetch from origin** in Integrity.
 
 ## Troubleshooting
