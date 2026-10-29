@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.0 — 2026-10-29
+
+- **Read a plugin's changelog before updating it.** A plugin with an update now has a **Changelog** section in its details. Click **Show Changelog** to see what the versions the update brings change, marked **New**, with earlier versions a click away. PressRoom gets it the way WordPress's **View details** link does, so premium plugins answer too: Gravity Forms and its add-ons, ACF PRO, Rank Math PRO, SearchWP, WP All Import Pro, and more. If a vendor has released a newer version since your last scan, it says so. When a plugin doesn't provide a changelog, **Open in WordPress** opens its details page on your local site.
+- **See updates your local site can't.** Premium plugins such as Rank Math PRO report updates only where their license is active, which is often production alone. Turn on **Updates from another environment** in a project's **Settings** and choose a server from its `wp-cli.yml` (production is suggested). Each scan then also reads that server's plugins and themes over SSH and lists the updates your local site doesn't see, as **Needs update ZIP**, saying which server reported them. Nothing on the server changes: PressRoom reads what the server's own update check found without refreshing it. The update run pauses for the vendor's ZIP (or prepare it ahead in the plugin's details). If the server can't be reached, your local scan still finishes as usual, and the project's Overview says why.
+- **A simpler hidden license key.** The Licenses page shows a saved key as a row of dots and its last four characters.
+
 ## 1.5.0 — 2026-10-28
 
 - **Project groups.** Keep related projects together, such as a client's sites. Click **New Group** on the Projects page, name it, and drag projects in (or right-click one and choose **Move to Group**); you can also choose a group when adding projects, or in a project's Settings. Click a group to fold it (it slides closed), drag projects and groups into any order (Sort by **Your order**), click its color square to pick a preset or any hex color, and rename, scan, or delete it from its menu. PressRoom remembers it all after you quit.

@@ -123,6 +123,10 @@ Click any plugin or theme to choose how it should be handled:
 
 You can leave a note on any plugin (for example, "Don't update past 6.2: breaks the booking form"), and PressRoom shows it wherever that plugin appears.
 
+**See what an update changes first.** A plugin with an update has a **Changelog** section in its details: click **Show Changelog** to read the notes for the versions the update brings, marked **New**, with earlier versions a click away. PressRoom gets them the way WordPress's **View details** link does, so premium plugins whose vendors answer there (Gravity Forms and its add-ons, ACF PRO, Rank Math PRO, SearchWP, WP All Import Pro, and more) show theirs too. If a plugin doesn't provide one, **Open in WordPress** takes you to its details page on your local site.
+
+**Updates your local site can't see.** Some premium plugins, such as Rank Math PRO, report updates only where their license is active, and their licenses often can't be active on both production and your local copy. Turn on **Updates from another environment** in a project's **Settings** and choose a server from its `wp-cli.yml` (production is suggested). Each scan then also reads that server's plugins and themes over SSH, and lists updates your local site doesn't see as **Needs update ZIP**, saying where they were reported. Nothing on the server changes: PressRoom reads what the server's own update check found and doesn't refresh it. Download the ZIP from the vendor and prepare it in the plugin's details, or the update run pauses and asks for it.
+
 <p align="center"><img src="images/update-policy.png" width="600" alt="A plugin's details: its note, versions, update source, and the update method to choose"></p>
 
 ### Saved licenses
@@ -251,7 +255,7 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings â€
 - **Everything stays on your Mac.** No account, analytics, or tracking.
 - **Scans, comparisons, and integrity scans only read.** Files change only when you apply or restore updates (on your local sites) or confirm a cleanup (on a server, after a backup).
 - **License keys are locked with Touch ID.** Keys you save in PressRoom are sealed by your Mac's Secure Enclave and opened only with Touch ID or your password, to add one to a local site (sent to WP-CLI without appearing on any command line) or to show or copy it. Keys already on your sites are never read: license checks look only at whether a license is active.
-- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH (only for Integrity), the pages you compare, and GitHub to check for new versions of PressRoom.
+- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH (only for Integrity, and for reading another environment's updates if you turn that on), the pages you compare, and GitHub to check for new versions of PressRoom.
 - PressRoom never commits, pushes, or fetches with Git unless you click **Fetch from origin** in Integrity.
 
 ## Troubleshooting
