@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.0 — 2026-10-30
+
+- **The Debug Log tab.** Every project page has a new **Debug Log** tab showing WordPress's `debug.log` from your local site or any server in the project's `wp-cli.yml`. It's read fresh from that environment every time, and your local site's log updates on its own while the tab is open.
+- **Built for reading.** It opens on the most recent stretch of time with messages, with counts of errors, warnings, plugin messages, and notices and a chart of when they happened. Each problem appears once with how many times it was logged, a plain headline (without PHP's prefixes or WordPress's boilerplate), and the plugin, theme, or file it came from; click one for its stack trace, failed query, and each time it happened. Notices and deprecations are hidden until you ask for them. Search, filter by level or source, sort, switch to a **Timeline** of every message, and page back through time.
+- **Logging off? PressRoom says so.** When there's no log, PressRoom checks `WP_DEBUG` and `WP_DEBUG_LOG`: it tells you why logging is off and gives you the lines to add to `wp-config.php`, or, when logging is on and nothing's been written, shows that all is clear.
+- **Open File and Clear.** **Open File** opens the log in the app your Mac uses for `.log` files. **Clear…** empties the log after you confirm, and the tab shows it empty at once.
+- **Clear messages when a server can't be reached,** saying why (no answer, a key it didn't accept, or a server PressRoom hasn't seen before) with the next step: **Try Again**, **Set Up SSH Access…**, or **Trust This Server**.
+
 ## 1.7.0 — 2026-10-29
 
 - **Scheduled scans.** PressRoom can scan your projects for updates, and check your servers for leftover files, on its own: every day, on weekdays, or once a week, at the hour you choose. Click **Schedule Scans…** on the Updates page or **Schedule…** on Integrity (or open **Settings › Schedules**), turn a schedule on, and pick when. Each project follows the shared schedule, gets its own, or is left out, and you can set that in the schedule window or in the project's **Settings**. Schedules run while PressRoom is open, even with only its menu bar icon showing; one missed while your Mac slept runs when it wakes. Each run sends one notification summing up what it found. Turn on **Open at login** so they keep running after a restart.

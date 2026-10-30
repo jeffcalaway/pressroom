@@ -21,6 +21,7 @@ Everything happens on your Mac. There's no account, no subscription, and nothing
   - [Before-and-after screenshots](#before-and-after-screenshots)
   - [Compare environments](#compare-environments)
   - [Integrity: leftover files on your servers](#integrity-leftover-files-on-your-servers)
+  - [Debug log](#debug-log)
   - [Notifications](#notifications)
   - [The menu bar icon](#the-menu-bar-icon)
   - [Settings](#settings)
@@ -221,6 +222,17 @@ When you delete a plugin or theme from your Git repository and deploy, the old f
 - **Ignore rules** leave files out of a project's scans for good, written like `.gitignore` lines: `wp-content/backups/` for a folder, `*.log` for names anywhere. Right-click a folder or file to ignore it, or click **Ignore Rules** to edit them.
 - **Schedule it.** Click **Schedule…** on All servers to check every server, or just some projects, on a schedule. Scheduled checks only read; nothing is removed without you.
 
+### Debug log
+
+A project's **Debug Log** tab shows WordPress's `debug.log` from your local site or any server in its `wp-cli.yml`. Pick an environment at the top: PressRoom reads the log from there every time, so it's never stale, and your local site's log keeps itself up to date while the tab is open.
+
+- **What's happening now comes first.** The log opens on the most recent stretch of time that has messages (the last hour, 24 hours, 7 days, or all time), with how many errors, warnings, plugin messages, and notices it holds and a small chart of when they happened.
+- **Each problem appears once,** however many times it was logged, with a count, how long ago it last happened, a plain headline, and where it came from: the plugin, theme, or WordPress itself, and the file and line. Click one for the rest: the stack trace, a failed database query, each time it was logged, and the message exactly as written.
+- **Notices and deprecations wait behind a filter.** **Important** leaves them out (it says how many) so errors and warnings stand out; choose **All** to see everything. Search, show one plugin or theme at a time, sort by most recent, most frequent, or most serious, or switch to **Timeline** for every message in order. Long logs are split into pages going back in time.
+- **No log?** PressRoom checks whether `WP_DEBUG` and `WP_DEBUG_LOG` are on. If logging is off, it says why and gives you the lines to add to `wp-config.php`. If logging is on and nothing's been written, that's all clear.
+- **Open File** opens the log in the app your Mac uses for `.log` files (Console, unless you've chosen another). For a server, that's PressRoom's copy of what it just read.
+- **Clear…** empties the log on that environment after you confirm. There's no backup, and WordPress keeps writing new messages to the same file.
+
 ### Notifications
 
 PressRoom can tell you when long work finishes: scans, update runs (and when a run needs you), integrity scans and cleanups, and comparisons. Choose which in **Settings › Notifications**. Each project can follow those settings, choose its own, or stay quiet. By default, notifications only appear when you're working in another app.
@@ -262,9 +274,9 @@ Prefer it hands-off? Turn on **Download updates automatically** in **Settings �
 ## Privacy and safety
 
 - **Everything stays on your Mac.** No account, analytics, or tracking.
-- **Scans, comparisons, and integrity scans only read.** Files change only when you apply or restore updates (on your local sites) or confirm a cleanup (on a server, after a backup).
+- **Scans, comparisons, integrity scans, and debug logs only read.** Files change only when you apply or restore updates (on your local sites), confirm a cleanup (on a server, after a backup), or confirm clearing a debug log.
 - **License keys are locked with Touch ID.** Keys you save in PressRoom are sealed by your Mac's Secure Enclave and opened only with Touch ID or your password, to add one to a local site (sent to WP-CLI without appearing on any command line) or to show or copy it. Keys already on your sites are never read: license checks look only at whether a license is active.
-- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH or SFTP (only for Integrity, and for reading another environment's updates if you turn that on), the pages you compare, and GitHub to check for new versions of PressRoom.
+- **What goes online:** WordPress's own update checks (to WordPress.org and your plugins' vendors), plugin icons (you can turn these off), GitLab (only if you sign in, read-only), your servers over SSH or SFTP (only for Integrity, debug logs, and reading another environment's updates if you turn that on), the pages you compare, and GitHub to check for new versions of PressRoom.
 - PressRoom never commits, pushes, or fetches with Git unless you click **Fetch from origin** in Integrity.
 
 ## Troubleshooting
