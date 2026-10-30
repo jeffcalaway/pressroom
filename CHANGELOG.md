@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.0 — 2026-10-30
+
+- **Composer updates, found.** PressRoom now asks Composer itself whether the plugins and themes it installs have newer versions, so private packages WordPress can't see are covered too. Each one shows its version and the one available (**Composer update**) or **Up to date**. The **Composer** list on a project's Updates tab counts the updates, lists them first, and says which need a newer version constraint in `composer.json`; the project's Overview counts them too. Apply them with Composer, then scan again.
+- **Changelogs for Composer updates.** Open a Composer update's details and click **Show Changelog**: PressRoom downloads the new release with Composer, reads the changelog it ships, and deletes the download. Your project's files aren't touched.
+- **Changelogs that are easy to scan.** Changelogs are now a timeline of releases: a summary of how many the update brings and how many changes of each kind, each release's date, and every note tagged **Added**, **Improved**, **Fixed**, **Changed**, **Removed**, or **Security** so the notes line up. Long updates show their newest releases first, with the rest, and the versions you already have, a click away.
+- **WP Engine's error log in Debug Log.** On WP Engine, when WordPress isn't writing `debug.log` (because `WP_DEBUG` or `WP_DEBUG_LOG` is off), the Debug Log tab shows the PHP error log WP Engine keeps instead: about the last day, including warnings, without WP Engine's security auditor events. It's read the way WP Engine's own **Error Log** link reads it, and its API key never leaves the server.
+- **A clearer Projects list.** Each group sits in its own card, edged in its color. **Top** and **Bottom** beside **Groups** place groups above or below the other projects, and the toolbar folds tidily as the window narrows.
+
 ## 1.8.0 — 2026-10-30
 
 - **The Debug Log tab.** Every project page has a new **Debug Log** tab showing WordPress's `debug.log` from your local site or any server in the project's `wp-cli.yml`. It's read fresh from that environment every time, and your local site's log updates on its own while the tab is open.
