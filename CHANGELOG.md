@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.1 — 2026-10-31
+
+- **Updates always bring you to the newest version.** If PressRoom had already downloaded an update and stayed open while newer versions came out, it kept offering that first update instead of the latest one. It now notices newer releases, swaps in the newest, and checks once more before installing. If you're a few versions behind, quit and reopen PressRoom (or choose **Check for Updates…** from its menu) to get 1.9.1 directly.
+
 ## 1.9.0 — 2026-10-30
 
 - **Composer updates, found.** PressRoom now asks Composer itself whether the plugins and themes it installs have newer versions, so private packages WordPress can't see are covered too. Each one shows its version and the one available (**Composer update**) or **Up to date**. The **Composer** list on a project's Updates tab counts the updates, lists them first, and says which need a newer version constraint in `composer.json`; the project's Overview counts them too. Apply them with Composer, then scan again.
