@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.2 — 2026-11-03
+
+- **Database backups work with MAMP 7.** MAMP 7 moved its MySQL tools into a folder for each MySQL version, so PressRoom couldn't find `mysqldump` and update runs stopped before starting with "The database export failed… mysqldump: No such file or directory." PressRoom now uses the tools for the MySQL version MAMP is set to run, and works with older MAMP versions as before. Projects you've already added pick this up on their own; there's nothing to re-add.
+
 ## 1.9.1 — 2026-10-31
 
 - **Updates always bring you to the newest version.** If PressRoom had already downloaded an update and stayed open while newer versions came out, it kept offering that first update instead of the latest one. It now notices newer releases, swaps in the newest, and checks once more before installing. If you're a few versions behind, quit and reopen PressRoom (or choose **Check for Updates…** from its menu) to get 1.9.1 directly.
