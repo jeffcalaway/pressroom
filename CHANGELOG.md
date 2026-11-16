@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.10.0 — 2026-11-15
+
+- **Update a whole group at once.** Each group on the Projects list has an **Update Group** button (and an item in its menu) that opens Update Projects with just that group's projects chosen. Update Projects also has a group picker, so you can switch between all projects and any group with updates waiting.
+- **A much faster Updates page.** With many projects and many updates, the Updates page used to take seconds to open and stuttered while scans ran. It now opens almost at once and stays smooth.
+- **Production's updates, even when WP-CLI is noisy.** When a plugin on the other environment printed warnings or broke WP-CLI's plugin list, PressRoom couldn't list that environment's updates. It now tries again in simpler ways, including with plugins and themes switched off for the read, and tells you when it had to. If it still can't, it shows what WP-CLI actually said, and only suggests trusting the server when that's really the problem.
+- **The right reason for a waiting add-on update.** An add-on like Gravity Forms Partial Entries could show as needing a license when it actually needs a newer Gravity Forms first. PressRoom now says **Update Gravity Forms first**, and the Licenses page no longer flags it. The same applies to WooCommerce and Elementor add-ons and to plugins that name the plugins they require.
+
 ## 1.9.2 — 2026-11-03
 
 - **Database backups work with MAMP 7.** MAMP 7 moved its MySQL tools into a folder for each MySQL version, so PressRoom couldn't find `mysqldump` and update runs stopped before starting with "The database export failed… mysqldump: No such file or directory." PressRoom now uses the tools for the MySQL version MAMP is set to run, and works with older MAMP versions as before. Projects you've already added pick this up on their own; there's nothing to re-add.
