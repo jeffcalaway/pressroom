@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.1 — 2026-11-17
+
+- **Updates clean up after themselves.** After PressRoom updates, it now deletes the version it replaced and the installer it downloaded, so old copies no longer take up space on your Mac. Your projects and settings aren’t touched.
+
 ## 1.10.0 — 2026-11-15
 
 - **Update a whole group at once.** Each group on the Projects list has an **Update Group** button (and an item in its menu) that opens Update Projects with just that group's projects chosen. Update Projects also has a group picker, so you can switch between all projects and any group with updates waiting.
