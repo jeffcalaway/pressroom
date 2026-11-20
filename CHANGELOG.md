@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.2 — 2026-11-20
+
+- **Production's updates and debug log on WP Engine.** On some WP Engine sites, reading the other environment's updates failed with "Unable to determine the document root", and the Debug Log tab couldn't read the site's settings or WP Engine's error log. PressRoom now runs WP-CLI from the site's own folder, which WP Engine needs, so both work. Nothing needs to change in your `wp-cli.yml`.
+
 ## 1.10.1 — 2026-11-17
 
 - **Updates clean up after themselves.** After PressRoom updates, it now deletes the version it replaced and the installer it downloaded, so old copies no longer take up space on your Mac. Your projects and settings aren’t touched.
